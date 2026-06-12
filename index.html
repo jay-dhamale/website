@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Dhamale — Developer • Otaku • Bookworm</title>
+  <meta name="description" content="Jay Dhamale — VP of Engineering at Atomic Loops. Full-stack developer, anime lover, bookworm. Sleek sci-fi interface meets cozy otaku corner." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0f'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%2300f0ff' font-family='monospace'>J_</text></svg>" />
+</head>
+<body>
+
+  <!-- animated background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <!-- tsukuyomi easter-egg overlay -->
+  <div class="tsukuyomi" id="tsukuyomi" aria-hidden="true">
+    <div class="red-moon"></div>
+    <p class="tsukuyomi-text">無限月読 — INFINITE TSUKUYOMI ACTIVATED<br /><span>you are now trapped in a genjutsu. type <code>release</code> or press ESC to wake up.</span></p>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav">
+    <a href="#hero" class="nav-logo">jay<span class="c">@</span>dhamale<span class="m">:~$</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#anime">anime</a></li>
+        <li><a href="#books">books</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero">
+      <p class="terminal-line mono"><span class="prompt">&gt;</span> whoami<span class="caret" id="heroCaret"></span></p>
+      <h1 class="glitch" data-text="JAY DHAMALE">JAY DHAMALE</h1>
+      <p class="tagline">
+        <span class="gradient-text">Developer</span><span class="dot">•</span>
+        <span class="gradient-text">Otaku</span><span class="dot">•</span>
+        <span class="gradient-text">Bookworm</span>
+      </p>
+      <div class="terminal-card glass" aria-label="terminal introduction">
+        <div class="terminal-head">
+          <span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span>
+          <span class="t-title mono">jay@atomicloops — zsh</span>
+        </div>
+        <div class="terminal-body mono" id="heroTerminal">
+          <p><span class="prompt">&gt;</span> <span class="typed" data-type="role --current">role --current</span></p>
+          <p class="t-out">VP of Engineering @ <a href="https://atomicloops.com" target="_blank" rel="noopener">Atomic Loops</a></p>
+          <p><span class="prompt">&gt;</span> <span class="typed" data-type="nature">nature</span></p>
+          <p class="t-out">developer. always has been. 🔧</p>
+          <p><span class="prompt">&gt;</span> <span class="typed" data-type="editor --primary">editor --primary</span></p>
+          <p class="t-out">vim. yes, i know how to exit. no, i won't use anything else. ⌨️</p>
+          <p><span class="prompt">&gt;</span> <span class="typed" data-type="status --after-hours">status --after-hours</span></p>
+          <p class="t-out">part-time dev · full-time reader · rewatching Naruto</p>
+        </div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-cyan">view projects<span aria-hidden="true"> →</span></a>
+        <a href="#contact" class="btn btn-magenta">init contact</a>
+      </div>
+      <span class="hero-kanji" aria-hidden="true">忍</span>
+    </section>
+
+    <!-- ===== 2. ABOUT — RPG stat card ===== -->
+    <section class="section" id="about">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">自己紹介</span>./about<span class="title-cursor">_</span></h2>
+      <div class="about-grid">
+        <div class="char-card glass fade-in">
+          <div class="char-head">
+            <div class="char-avatar" aria-hidden="true">JD</div>
+            <div>
+              <p class="char-name mono">JAY DHAMALE</p>
+              <p class="char-class">CLASS: <span class="c">Full-Stack Developer</span> · SUBCLASS: <span class="m">Engineering Leader</span></p>
+            </div>
+            <div class="char-level mono"><span>LVL</span>99</div>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-bar"><span class="stat-name mono">PYTHON / DJANGO</span><div class="bar"><div class="bar-fill" style="--w: 95%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">GO</span><div class="bar"><div class="bar-fill" style="--w: 82%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">FLUTTER</span><div class="bar"><div class="bar-fill" style="--w: 88%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">CLOUD / KUBERNETES</span><div class="bar"><div class="bar-fill" style="--w: 88%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">AI / LLM INTEGRATION</span><div class="bar"><div class="bar-fill mag" style="--w: 90%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">DATA AT SCALE</span><div class="bar"><div class="bar-fill mag" style="--w: 87%"></div></div></div>
+            <div class="stat-bar"><span class="stat-name mono">TEAM LEADERSHIP</span><div class="bar"><div class="bar-fill mag" style="--w: 92%"></div></div></div>
+          </div>
+          <div class="char-traits mono">
+            <span class="trait">⚡ ships fast</span>
+            <span class="trait">⌨️ vim user (btw)</span>
+            <span class="trait">📚 reads daily</span>
+            <span class="trait">🍥 otaku +10</span>
+            <span class="trait">☕ caffeine-driven</span>
+          </div>
+        </div>
+        <div class="about-bio fade-in">
+          <p>I'm a <span class="c">developer by nature</span>. By day I lead engineering at Atomic Loops — architecture, code reviews, shipping products end-to-end. I've built across <span class="c">AI</span>, <span class="c">cloud</span>, and <span class="c">large-scale systems</span> processing millions of data points. By night vim stays open: side projects, AI experiments, whatever looks fun to build.</p>
+          <p>The rest of my XP goes into <span class="m">books</span> and <span class="m">anime</span>. Naruto raised me; Itachi remains the greatest character ever written, and I'll die on that hill.</p>
+          <p class="mono quote-mini">"Wake up to reality! Nothing ever goes as planned in this accursed world." — a daily standup, probably (Madara)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. PROJECTS ===== -->
+    <section class="section" id="projects">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">作品</span>./projects<span class="title-cursor">_</span></h2>
+      <div class="proj-grid">
+        <article class="proj-card glass fade-in">
+          <div class="proj-top mono"><span class="proj-icon">✦</span><span class="proj-links"><a href="https://github.com/jay-dhamale/anthropic-sdk-python" target="_blank" rel="noopener" aria-label="AI SDK explorations on GitHub">repo ↗</a></span></div>
+          <h3>ai sdk explorations</h3>
+          <p>Hands-on builds with Anthropic &amp; OpenAI APIs — practical LLM features, not demos.</p>
+          <div class="tags"><span>Python</span><span>LLMs</span><span>APIs</span></div>
+        </article>
+      </div>
+      <a class="more-link mono fade-in" href="https://github.com/jay-dhamale/" target="_blank" rel="noopener">&gt; cd github.com/jay-dhamale --all ↗</a>
+    </section>
+
+    <!-- ===== 4. SKILLS ===== -->
+    <section class="section" id="skills">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">技術</span>./skills<span class="title-cursor">_</span></h2>
+      <div class="badges fade-in">
+        <span class="badge">AI / LLMs</span>
+        <span class="badge">Python</span><span class="badge">Go</span><span class="badge">Django</span><span class="badge">DRF</span>
+        <span class="badge">Flutter</span><span class="badge">Dart</span><span class="badge">JavaScript</span>
+        <span class="badge">Kubernetes</span><span class="badge">Docker</span><span class="badge">Cloud</span><span class="badge">CI/CD</span>
+        <span class="badge">PostgreSQL</span><span class="badge">Git</span><span class="badge">Vim</span>
+        <span class="badge badge-m">Data Pipelines @ Scale</span><span class="badge badge-m">System Design</span><span class="badge badge-m">Team Leadership</span><span class="badge badge-m">Code Review Jutsu</span>
+      </div>
+    </section>
+
+    <!-- ===== 5. ANIME SHELF ===== -->
+    <section class="section" id="anime">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">アニメ</span>./anime-shelf<span class="title-cursor">_</span></h2>
+
+      <h3 class="shelf-label mono c">// currently_watching</h3>
+      <div class="poster-row">
+        <article class="poster glass fade-in">
+          <div class="poster-art" style="--g1:#1c3aa9; --g2:#00f0ff"><span>呪術廻戦</span></div>
+          <div class="poster-meta"><h4>Jujutsu Kaisen</h4><p class="mono rating">★★★★★ 9/10</p></div>
+        </article>
+      </div>
+
+      <h3 class="shelf-label mono c">// next_to_watch <span class="dim">— queued in the watchlist</span></h3>
+      <div class="poster-row">
+        <article class="poster glass fade-in">
+          <div class="poster-art" style="--g1:#0f5132; --g2:#9ff0c0"><span>フリーレン</span></div>
+          <div class="poster-meta"><h4>Frieren</h4><p class="mono rating">⏳ queued · heard it's a masterpiece</p></div>
+        </article>
+        <article class="poster glass fade-in">
+          <div class="poster-art" style="--g1:#6b021a; --g2:#ff2d95"><span>チェンソーマン</span></div>
+          <div class="poster-meta"><h4>Chainsaw Man</h4><p class="mono rating">⏳ queued · denji awaits</p></div>
+        </article>
+      </div>
+
+      <h3 class="shelf-label mono m">// all_time_favorites</h3>
+      <div class="poster-row">
+        <article class="poster glass fade-in">
+          <div class="poster-art" style="--g1:#b35a00; --g2:#ffd166"><span>ナルト</span></div>
+          <div class="poster-meta"><h4>Naruto / Shippuden</h4><p class="mono rating">★★★★★ 11/10 · peak fiction</p></div>
+        </article>
+        <article class="poster glass fade-in">
+          <div class="poster-art" style="--g1:#3a0c0c; --g2:#ff5e5e"><span>進撃の巨人</span></div>
+          <div class="poster-meta"><h4>Attack on Titan</h4><p class="mono rating">★★★★★ 10/10</p></div>
+        </article>
+      </div>
+
+      <h3 class="shelf-label mono c">// legendary_shinobi <span class="dim">— characters that live rent-free in my head</span></h3>
+      <div class="char-row">
+        <article class="shinobi glass fade-in">
+          <div class="dojutsu sharingan-eye" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h4>Itachi Uchiha</h4>
+          <p class="mono role-tag c">THE FAVORITE · 一番</p>
+          <p class="shinobi-quote">"Love is a twisted curse."</p>
+        </article>
+        <article class="shinobi glass fade-in">
+          <div class="dojutsu rinnegan-eye" aria-hidden="true"></div>
+          <h4>Pain / Nagato</h4>
+          <p class="mono role-tag m">GOD OF SHINOBI PHILOSOPHY</p>
+          <p class="shinobi-quote">"Feel pain. Accept pain. Know pain."</p>
+        </article>
+        <article class="shinobi glass fade-in">
+          <div class="dojutsu kamui-eye" aria-hidden="true"><i></i></div>
+          <h4>Obito Uchiha</h4>
+          <p class="mono role-tag c">THE MAN WHO BROKE US ALL</p>
+          <p class="shinobi-quote">"Those who abandon their friends are worse than scum."</p>
+        </article>
+        <article class="shinobi glass fade-in">
+          <div class="dojutsu rinnegan-eye madara" aria-hidden="true"></div>
+          <h4>Madara Uchiha</h4>
+          <p class="mono role-tag m">FINAL BOSS ENERGY</p>
+          <p class="shinobi-quote">"Wake up to reality! Nothing ever goes as planned in this accursed world."</p>
+        </article>
+      </div>
+
+      <div class="terminal-card glass quotes-log fade-in">
+        <div class="terminal-head">
+          <span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span>
+          <span class="t-title mono">quotes.log — lines that rewired my brain</span>
+        </div>
+        <div class="terminal-body mono">
+          <p><span class="prompt">&gt;</span> tail -n 2 /var/log/shinobi/quotes.log</p>
+          <p class="t-out quote-pain">[PAIN]&nbsp;&nbsp;&nbsp;"Feel pain. Accept pain. Know pain." <span class="dim">// 痛みを</span></p>
+          <p class="t-out quote-itachi">[GOJO] "Love is a twisted curse." <span class="dim">// 愛は歪んだ呪い</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. BOOKSHELF ===== -->
+    <section class="section" id="books">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">本棚</span>./bookshelf<span class="title-cursor">_</span></h2>
+
+      <h3 class="shelf-label mono c">// currently_reading</h3>
+      <div class="book-row">
+        <article class="book fade-in">
+          <div class="book-cover" style="--bc1:#b00610; --bc2:#16040a"><span>No<br/>Rules<br/>Rules</span></div>
+          <div class="book-meta"><h4>No Rules Rules</h4><p>Netflix's culture of freedom &amp; responsibility — field notes for building teams that own their work.</p></div>
+        </article>
+      </div>
+
+      <h3 class="shelf-label mono m">// all_time_shelf</h3>
+      <div class="book-row">
+        <article class="book fade-in">
+          <div class="book-cover" style="--bc1:#0e7490; --bc2:#04111a"><span>Atomic<br/>Habits</span></div>
+          <div class="book-meta"><h4>Atomic Habits</h4><p>Read it while working at Atomic Loops. The universe has a sense of humour.</p></div>
+        </article>
+        <article class="book fade-in">
+          <div class="book-cover" style="--bc1:#7c2d12; --bc2:#1a0a04"><span>The<br/>Pragmatic<br/>Programmer</span></div>
+          <div class="book-meta"><h4>The Pragmatic Programmer</h4><p>The manual I wish someone handed me on day one.</p></div>
+        </article>
+        <article class="book fade-in">
+          <div class="book-cover" style="--bc1:#1e3a8a; --bc2:#050a18"><span>Deep<br/>Work</span></div>
+          <div class="book-meta"><h4>Deep Work</h4><p>How I guard my coding hours from calendar jutsu.</p></div>
+        </article>
+        <article class="book fade-in">
+          <div class="book-cover" style="--bc1:#4c1d95; --bc2:#0e0518"><span>Zero<br/>to One</span></div>
+          <div class="book-meta"><h4>Zero to One</h4><p>Required reading for anyone building anything.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 7. CONTACT ===== -->
+    <section class="section" id="contact">
+      <h2 class="section-title mono"><span class="jp" aria-hidden="true">連絡</span>./contact<span class="title-cursor">_</span></h2>
+      <div class="contact-grid">
+        <form class="terminal-card glass contact-form fade-in" id="contactForm" action="mailto:jay@atomicloops.com" method="post" enctype="text/plain">
+          <div class="terminal-head">
+            <span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span>
+            <span class="t-title mono">send_message.sh</span>
+          </div>
+          <div class="terminal-body mono">
+            <label for="fName"><span class="prompt">&gt;</span> enter_name:</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required placeholder="Uchiha Itachi" />
+            <label for="fEmail"><span class="prompt">&gt;</span> enter_email:</label>
+            <input id="fEmail" name="email" type="email" autocomplete="email" required placeholder="itachi@akatsuki.org" />
+            <label for="fMsg"><span class="prompt">&gt;</span> enter_message:</label>
+            <textarea id="fMsg" name="message" rows="4" required placeholder="let's build something..."></textarea>
+            <button type="submit" class="btn btn-cyan mono">./send --now</button>
+          </div>
+        </form>
+
+        <div class="contact-side fade-in">
+          <div class="terminal-card glass mini-term">
+            <div class="terminal-head">
+              <span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span>
+              <span class="t-title mono">hidden_terminal — try "help"</span>
+            </div>
+            <div class="terminal-body mono">
+              <div id="termOut" class="term-out" aria-live="polite"><p class="t-out dim">// psst. there are secrets in here. type <span class="c">help</span></p></div>
+              <div class="term-input-row">
+                <span class="prompt">&gt;</span>
+                <input id="termInput" type="text" aria-label="terminal command input" autocomplete="off" spellcheck="false" />
+              </div>
+            </div>
+          </div>
+          <ul class="socials mono">
+            <li><a href="https://github.com/jay-dhamale/" target="_blank" rel="noopener">[ github ]</a></li>
+            <li><a href="https://www.linkedin.com/in/jay-dhamale" target="_blank" rel="noopener">[ linkedin ]</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener">[ twitter/x ]</a></li>
+            <li><a href="https://myanimelist.net/" target="_blank" rel="noopener">[ myanimelist ]</a></li>
+            <li><a href="https://www.goodreads.com/" target="_blank" rel="noopener">[ goodreads ]</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <p>© <span id="year"></span> jay dhamale · built with 💻 + 🍥 + 📚</p>
+    <p class="dim">hint: the konami code still works. ↑↑↓↓←→←→BA</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
