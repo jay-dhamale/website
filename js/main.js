@@ -173,7 +173,7 @@ const COMMANDS = {
   books: ["reading: no rules rules — the netflix culture book.", "shelf: atomic habits, pragmatic programmer, deep work, zero to one."],
   skills: ["python · go · django · flutter · kubernetes · cloud · ai/llms", "large-scale data pipelines — millions of data points and counting", "passive ability: code review jutsu (+15 crit)"],
   socials: ["github.com/jay-dhamale · jay@atomicloops.com"],
-  itachi: ['"love is a twisted curse."', '"people live their lives bound by what they accept as correct and true."', "— the GOAT. forever in our hearts. 🌙"],
+  itachi: ['"time doesn\'t heal anything, it just teaches us how to live with pain."', '"people live their lives bound by what they accept as correct and true."', "— the GOAT. forever in our hearts. 🌙"],
   love: ['"love is a twisted curse." — itachi', "but it also wins wars. ask naruto. 🍥"],
   vim: ["opening vim...", ":wq — see? exited like a pro.", "real ones know: vim is not an editor, it's a lifestyle."],
   pain: ["SHINRA TENSEI! 💥", '"feel pain. accept pain. know pain."', "the world shall know pain... and good software."],
