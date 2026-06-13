@@ -330,6 +330,40 @@ main { position: relative; z-index: 1; }
 .role-tag { font-size: 0.62rem; letter-spacing: 0.16em; margin-bottom: 0.8rem; }
 .shinobi-quote { font-size: 0.82rem; color: var(--muted); font-style: italic; }
 
+/* spinning sharingan — faint background in anime section */
+.anime-section { position: relative; overflow: hidden; }
+.anime-section > *:not(.sharingan-spin) { position: relative; z-index: 1; }
+
+.sharingan-spin {
+  position: absolute; z-index: 0; pointer-events: none;
+  top: 18%; right: -6vw;
+  width: clamp(260px, 32vw, 460px); aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 34%, #ff4655, #c1121f 55%, #4d050c);
+  box-shadow: 0 0 90px rgba(193, 18, 31, 0.35), inset 0 0 40px rgba(0, 0, 0, 0.6);
+  opacity: 0.13;
+  animation: sharinganSpin 9s linear infinite;
+}
+.sharingan-spin .sharingan-ring {
+  position: absolute; inset: 22%;
+  border: 3px solid rgba(0, 0, 0, 0.7); border-radius: 50%;
+}
+.sharingan-spin .pupil {
+  position: absolute; top: 50%; left: 50%;
+  width: 20%; height: 20%; background: #000; border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.sharingan-spin .tomoe {
+  position: absolute; top: 50%; left: 50%;
+  width: 15%; height: 15%; background: #000;
+  border-radius: 50% 50% 50% 0;
+}
+.sharingan-spin .tomoe.t1 { transform: translate(-50%, -50%) rotate(0deg)   translateY(-200%) rotate(45deg); }
+.sharingan-spin .tomoe.t2 { transform: translate(-50%, -50%) rotate(120deg) translateY(-200%) rotate(45deg); }
+.sharingan-spin .tomoe.t3 { transform: translate(-50%, -50%) rotate(240deg) translateY(-200%) rotate(45deg); }
+
+@keyframes sharinganSpin { to { transform: rotate(360deg); } }
+
 /* dōjutsu eyes (pure CSS) */
 .dojutsu {
   width: 84px; height: 84px; border-radius: 50%;
