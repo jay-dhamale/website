@@ -172,7 +172,7 @@ const COMMANDS = {
   anime: ["currently: jujutsu kaisen.", "next to watch: frieren, chainsaw man.", "all-time: naruto (11/10), attack on titan.", "hot take: itachi is the best-written character in shonen. fight me."],
   books: ["reading: no rules rules — the netflix culture book.", "shelf: atomic habits, deep work, zero to one."],
   skills: ["python · go · django · flutter · kubernetes · cloud · ai/llms", "large-scale data pipelines — millions of data points and counting", "passive ability: code review jutsu (+15 crit)"],
-  socials: ["github.com/jay-dhamale · jay@atomicloops.com"],
+  socials: ["github.com/jay-dhamale · jay@atomicloops.com", "x.com/JayDhamale7 · instagram.com/jay__dhamale"],
   itachi: ['"time doesn\'t heal anything, it just teaches us how to live with pain."', '"people live their lives bound by what they accept as correct and true."', "— the GOAT. forever in our hearts. 🌙"],
   love: ['"love is a twisted curse." — itachi', "but it also wins wars. ask naruto. 🍥"],
   vim: ["opening vim...", ":wq — see? exited like a pro.", "real ones know: vim is not an editor, it's a lifestyle."],
