@@ -162,11 +162,13 @@ const termOut = document.getElementById("termOut");
 const COMMANDS = {
   help: [
     "available commands:",
-    "  whoami · anime · books · skills · socials · vim · clear",
+    "  whoami · location · anime · books · skills · socials · vim · clear",
     "  itachi · pain · obito · madara · love",
     "  ...and maybe a forbidden jutsu or two 👁️",
   ],
   whoami: ["jay dhamale — vp of engineering @ atomic loops.", "developer by nature. otaku by choice. reader by night. vim enjoyer always."],
+  location: ["127.0.0.1", "there's no place like home. 🏠", "ping me anyway — latency is basically zero."],
+  pwd: ["/home/jay", "// aka 127.0.0.1 — i never really leave localhost."],
   anime: ["currently: jujutsu kaisen.", "next to watch: frieren, chainsaw man.", "all-time: naruto (11/10), attack on titan.", "hot take: itachi is the best-written character in shonen. fight me."],
   books: ["reading: no rules rules — the netflix culture book.", "shelf: atomic habits, pragmatic programmer, deep work, zero to one."],
   skills: ["python · go · django · flutter · kubernetes · cloud · ai/llms", "large-scale data pipelines — millions of data points and counting", "passive ability: code review jutsu (+15 crit)"],
