@@ -170,7 +170,7 @@ const COMMANDS = {
   location: ["127.0.0.1", "there's no place like home. 🏠", "ping me anyway — latency is basically zero."],
   pwd: ["/home/jay", "// aka 127.0.0.1 — i never really leave localhost."],
   anime: ["currently: jujutsu kaisen.", "next to watch: frieren, chainsaw man.", "all-time: naruto (11/10), attack on titan.", "hot take: itachi is the best-written character in shonen. fight me."],
-  books: ["reading: no rules rules — the netflix culture book.", "shelf: atomic habits, pragmatic programmer, deep work, zero to one."],
+  books: ["reading: no rules rules — the netflix culture book.", "shelf: atomic habits, deep work, zero to one."],
   skills: ["python · go · django · flutter · kubernetes · cloud · ai/llms", "large-scale data pipelines — millions of data points and counting", "passive ability: code review jutsu (+15 crit)"],
   socials: ["github.com/jay-dhamale · jay@atomicloops.com"],
   itachi: ['"time doesn\'t heal anything, it just teaches us how to live with pain."', '"people live their lives bound by what they accept as correct and true."', "— the GOAT. forever in our hearts. 🌙"],
